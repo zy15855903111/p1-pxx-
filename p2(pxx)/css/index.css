@@ -1,0 +1,286 @@
+body,ul,h1,h2,h3,h4,h5,h6,p,figure,figcaption{
+  padding: 0;
+  margin: 0;  
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+}
+.center{
+  width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* 头部 */
+header{
+  background-color: black;
+}
+header .center{
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 0, 255);
+  font-size: 30px;
+}
+header img{
+  height: 100%;
+}
+header .center>div{
+  font-size: 14px;
+  width: 300px;
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #search{
+  color: black;
+  display: flex;
+  height: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  position: relative;
+  width: 180px;
+}
+header #search input{
+  width: 150px;
+  border: none;
+  height: 28px;
+  outline: none;
+}
+header #search button{
+  border: none;
+  width: 30px;
+  background-color: aquamarine;
+}
+header #search ul{
+  position: absolute;
+  width: 180px;
+  height: 200px;
+  z-index: 40;
+  background-color: aliceblue;
+  top: 30px;
+  left: -1px;
+  display: none;
+}
+header #search ul li{
+  border-bottom: 1px solid gray;
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+}
+header #search ul li:hover{
+  background-color: antiquewhite;
+  color: rgb(0, 195, 195);
+}
+header #log{
+  border: 2px rgb(255, 139, 139) solid;
+  border-radius: 3px;
+  background-color: rgb(0, 41, 66);
+  color: rgb(22, 188, 0);
+}
+
+/* 导航栏 */
+nav{
+  background-color: blueviolet;
+  height: 30px;
+  position: sticky;
+  top: -1px;
+  z-index: 20;
+}
+nav .center{
+  display: flex;
+  justify-content: space-between;
+}
+nav li{
+  width: 40%;
+  background-color: pink;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+  color: blueviolet;
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+}
+nav li>div{
+  position: absolute;
+  width: 1000px;
+  box-shadow: 1px 1px 1px rgb(150, 150, 150);
+  background-color: rgb(255, 255, 255);
+  height: 0px;
+  display: flex;
+  z-index: 10;
+  overflow: hidden;
+  transition: 0.3s;
+}
+nav #play>div{
+  right: 0;
+}
+nav .erji img{
+  width: 150px;
+  height: 200px;
+}
+nav .erji-l,nav .erji-r{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+}
+nav h4{
+  color: black;
+  margin: 20px 0;
+}
+
+/* 轮播图 */
+.banner{
+  height: 500px;
+}
+.banner img{
+  width: 1000px;
+  height: 500px;
+}
+.banner .center{
+  position: relative;
+}
+.banner h1{
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.banner .on{
+  background-color: gold;
+  opacity: 1;
+}
+.banner .center{
+  position: relative;
+}
+.banner ul{
+  position: absolute;
+  height: 10px;
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  bottom: 20px;
+  right: 40px;
+}
+.banner ul li{
+  width: 10px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+}
+.banner p{
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.558);
+  position: absolute;
+  top: calc(50% - 20px);
+}
+.banner .left_arrow{
+  left: 0;
+}
+.banner .right_arrow{
+  right: 0;
+}
+.banner p,.banner li{
+  cursor:pointer;
+}
+
+/* 内容 */
+section ul{
+  display: flex;
+  margin-top: 30px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+}
+section ul li{
+  height: 100%;
+  width: 100px;
+  text-align: center;
+  /* border: 2px solid rgb(255, 69, 212); */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: rgb(96, 255, 210);
+  color: rgb(255, 129, 148);
+}
+section ul>.on{
+  background-color: rgb(0, 186, 133);
+  color: rgb(166, 0, 25);
+}
+section article{
+  height: 350px;
+  display: none;
+  width: 100%;
+  border: 10px solid rgb(0, 186, 133);
+}
+section .on{
+  display: block;
+}
+section article .option{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+section article .option>div{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+}
+section article .option>div img{
+  margin-top: 10px;
+  width: 150px;
+  height: 200px;
+}
+section article .option>div h4{
+  color: black;
+  margin: 20px 0;
+}
+
+/* 尾部 */
+footer{
+  background-color: black;
+  text-align: center;
+  line-height: 30px;
+  color: gold;
+  height: 30px;
+  font-size: 20px;
+}
+
+/* 侧边倒计时 */
+#countdown{
+  z-index: 30;
+  width: 150px;
+  height: 250px;
+  background-color: blanchedalmond;
+  position: fixed;
+  right: 0;
+  top: calc(50% - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+}
+#countdown img{
+  width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#countdown li{
+  margin-top: 10px;
+  color: rgb(0, 255, 17);
+  text-align: center;
+}
+#countdown li h4{
+  font-weight: 900;
+  color: rgb(0, 140, 9);
+}
